@@ -1,0 +1,38 @@
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
+
+class Cadets extends CI_Controller
+{
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function index()
+    {
+		$this->load->view('template/header');
+        $this->load->view('cadet/R_cadet');
+		$this->load->view('cadet/R_cadet_css');
+    }
+
+    public function S_cadet()
+	{
+		$this->load->view('template/header');
+		$this->load->view('cadet/S_cadet');
+		$this->load->view('cadet/S_cadet_css');
+	}
+	
+	public function P_cadet()
+	{
+		$this->load->view('template/header');
+		$this->load->view('cadet/P_Cadet');
+		$this->load->view('cadet/P_Cadet_css');
+	}
+
+	public function C_Edit()
+	{
+		$this->load->view('template/header');
+		$this->load->view('cadet/Edit_Cadet');
+		$this->load->view('cadet/Edit_Cadet_css');
+	}
+}
